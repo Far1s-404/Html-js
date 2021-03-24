@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pomodomo</title>>
+        </head>
+<body>
+    <Body background=" C:pomo.png"
+    <h2><span> study Less & Smarter </h2>
+
+    <h2>POMODORO</h2>
+
+    <div id="countdown"></div>
+    <script>
+        var time = 1500
+        var downloadTimer = setInterval(function () {
+            if (time <= 0) {
+                clearInterval(downloadTimer);
+                document.getElementById("countdown").innerHTML = "You nailed it";
+                alert("Horray you made it you deserve your rest")
+            } else {
+                document.getElementById("countdown").innerHTML = (Math.round(time / 60)) + " minutes remaining";
+                
+            }
+            time -= 1;
+        }, 1000);
+
+        function myFunction() {
+            location.reload()
+        }
+    </script>
+    <button onclick="myFunction()">Reset</button>
+</body>
+</html>
